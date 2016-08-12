@@ -42,4 +42,9 @@ nav {
 
 #bad {
     background: linear-gradient(-90deg, white 75%, red 5%);
+    margin: 10px 0;
+}
+
+#ugly {
+    background: linear-gradient(-90deg, purple 33%, orange 5%);
 }

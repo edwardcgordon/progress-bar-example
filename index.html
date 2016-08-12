@@ -20,35 +20,61 @@
 
     <body>
       <section>
-        <h2>First attempt</h2>
-        <p>This is a progress bar with background color, and uses padding to give height. How do  I half fill it though?</p>
+        <h2>Creating a progress bar without Bootstrap.</h2>
+        <p>I wanted to create progress bars for my CV, without using Bootstrap. Using Bootstrap somehow felt like cheating. Because it is cheating. If I can hand-write this, you can too.<br>
+         Turns out it was far less pain than I thought it would be. Here are the steps I took</p>
+
+        <h2> Step 1. Bar for the course.</h2>
+        <p>All of the stuff I've half-read (no one reads a full book) about development all come down to a simple maxim. <b>Do the easy things first.</b> For me, this was to create a bar, and completely fill it.</p>
+        <p>My plan of attack was to build an empty section, "progress-bar", and give it a background color. I did this (below), and added a border. Components I needed were some padding in an empty container to give it depth, a border, and a background color.</p>
           <section class="progress-bar">
             <div></div>
           </section>
+        <p>And here is the pretty basic HTML/CSS for that bar above <br>
+          <script src="https://gist.github.com/edwardcgordon/98414b7abf0fd2ee164b6a3df3efd89e.js"></script>
+        </p>
         </section>
 
         <section>
-          <h2>Second attempt</h2>
-          <p>This one stops half way through by using CSS gradients</p>
+          <h2>Step 2. Making it progress</h2>
+          <p>Progress bars are rarely full. Unless of course you speak to some kind of local Silicon TrainTrack twat. Then everything's always full. Or empty. I can't tell. <br>
+          Anyway. I spent a long time trying to achieve this with an internal div, and margins. It didn't work and would be fiddly if I did. So I used transitions instead.<br>
+          At first, I couldn't get it to stop fading like a 1990's shell suit top. But I changed the % values until it worked. Here it is.</p>
             <section class="progress-bar-2">
               <div></div>
             </section>
+            <p>And here's the code</p>
+            <script src="https://gist.github.com/edwardcgordon/8e523883345d0abd0583366a972d4a10.js"></script>
+            <p><b>NB. This may not work on old Internet Explorer. But if you need to care about that you're getting paid more than me, so I don't care tbh.</b></p>
         </section>
 
         <section>
-          <h2>Third attempt</h2>
-          <p>Have now changed from single classes for each bar to a single class for the bar, and then the id to control specifics such as color and how "full" something is.</p>
+          <h2>Step 3. Refactor, you ass</h2>
+          <p>What's past is prologue. Shakespeare said that, and it somehow seems relevant to realising you've done something like a knobhead.<br>
+            I WAS creating new CSS rules for every different color and gradient difference. I realised that I could actually have CLASS to control the layout, and a specific ID to control the colors and gradient.</p>
             <section class="progress-bar" id="good">
               <div></div>
             </section>
+
+            <p>You can see that the progress-bar rule doesn't have a color. The ID selector does. So, do that. Also,ignore the empty DIVs. I put them in to try something out and it failed. So don't use them.</p>
+            <script src="https://gist.github.com/edwardcgordon/3450880d342f46df3fcfaa9904a5048d.js"></script>
         </section>
 
         <section>
-          <h2>Fourth attempt</h2>
-          <p>Basically got the formula nailed now. Change the gradient, create some new ids such as "good", "bad", "almost" and then it's easy to add in during development</p>
+          <h2>Step 4. The long march of progress</h2>
+          <p>That's it. Change the colors and % as you see fit. Just make a new rule for each id you make and see what happens.</p>
+            <section class="progress-bar" id="good">
+              <div></div>
+            </section>
+
             <section class="progress-bar" id="bad">
               <div></div>
             </section>
+
+            <section class="progress-bar" id="ugly">
+              <div></div>
+            </section>
+
         </section>
 
     </body>
