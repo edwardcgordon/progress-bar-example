@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <nav class"header">
+      <h1>Progress Bar Examples</h1>
+    </nav>
+
+    <body>
+      <section>
+        <h2>First attempt</h2>
+        <p>This is a progress bar with background color, and uses padding to give height. How do  I half fill it though?</p>
+          <section class="progress-bar">
+            <div></div>
+          </section>
+        </section>
+
+        <section>
+          <h2>Second attempt</h2>
+          <p>This one stops half way through by using CSS gradients</p>
+            <section class="progress-bar-2">
+              <div></div>
+            </section>
+        </section>
+
+        <section>
+          <h2>Third attempt</h2>
+          <p>Have now changed from single classes for each bar to a single class for the bar, and then the id to control specifics such as color and how "full" something is.</p>
+            <section class="progress-bar" id="good">
+              <div></div>
+            </section>
+        </section>
+
+        <section>
+          <h2>Fourth attempt</h2>
+          <p>Basically got the formula nailed now. Change the gradient, create some new ids such as "good", "bad", "almost" and then it's easy to add in during development</p>
+            <section class="progress-bar" id="bad">
+              <div></div>
+            </section>
+        </section>
+
+    </body>
+</html>
