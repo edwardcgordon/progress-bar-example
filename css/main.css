@@ -1,14 +1,22 @@
 body {
   max-width: 80%;
-  margin-left: 10%;
   margin: 2% 5% 5% 10%;
 }
 
 nav {
   max-width: 100%;
-  font-size: 3em;
+  font-size: 2em;
   margin: 0.5em 0 0.9em 0;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.gist {
+  max-width: 70%;
+  margin-left: 10%;
 }
 
 .progress-bar {
@@ -21,19 +29,6 @@ nav {
   background: green;
   background-size: 10%;
   padding: 0.3em;
-}
-
-.progress-bar-2  {
-  max-height: 12px;
-  border-style: solid;
-  border-color: #272727;
-  border-width: 1px;
-  border-radius: 5%;
-  max-width: 50%;
-  background: green;
-  background-size: 10%;
-  padding: 0.3em;
-  background: linear-gradient(-90deg, white 50%, green 50%);
 }
 
 #good  {
